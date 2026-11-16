@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060812">
+  <meta name="description" content="Nexora Digital: páginas web, automatizaciones, asistentes con IA y seguimiento de clientes para pymes de Argentina. Guía práctica, calculadora de escenarios y recursos Premium.">
+  <title>Nexora Digital · Soluciones digitales para pymes</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233ce8c5'/%3E%3Cpath d='M10 23V9l12 14V9' fill='none' stroke='%2304120f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fondo decorativo -->
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb--mint"></div>
+    <div class="orb orb--violet"></div>
+    <div class="orb orb--pink"></div>
+    <div class="grid-lines"></div>
+  </div>
+
+  <!-- ================= LOGIN ================= -->
+  <div id="loginView" class="login-view">
+    <div class="login-shell" id="loginShell">
+
+      <aside class="login-pitch">
+        <a class="brand" href="#" aria-label="Nexora Digital">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6 18V6l12 12V6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand__text">Nexora <span class="brand__sub">Digital</span></span>
+        </a>
+
+        <div class="pitch-copy">
+          <span class="pill pill--mint">Soluciones digitales para pymes</span>
+          <h1>Tu negocio, más ordenado y <span class="grad-text">menos consultas perdidas</span>.</h1>
+          <p class="pitch-lead">Nexora Digital diseña páginas web, automatizaciones, asistentes con IA y sistemas de seguimiento para pequeñas y medianas empresas de Argentina.</p>
+        </div>
+
+        <ul class="pitch-list">
+          <li>
+            <span class="tick" aria-hidden="true">✓</span>
+            <div><strong>Problemas concretos</strong><span>Consultas sin responder, tareas repetitivas y presupuestos sin seguimiento.</span></div>
+          </li>
+          <li>
+            <span class="tick" aria-hidden="true">✓</span>
+            <div><strong>Guía y herramientas</strong><span>Servicios, precios orientativos en ARS, calculadora y plantillas editables.</span></div>
+          </li>
+        </ul>
+
+        <div class="pitch-metric">
+          <div>
+            <span>Servicios definidos</span>
+            <strong>6</strong>
+          </div>
+          <div class="pitch-metric__divider" aria-hidden="true"></div>
+          <div>
+            <span>Plan de inicio</span>
+            <strong>90 <small>días</small></strong>
+          </div>
+        </div>
+      </aside>
+
+      <section class="login-panel" aria-labelledby="loginTitle">
+        <div class="login-head">
+          <span class="pill pill--demo">Acceso demo · sin backend</span>
+          <h2 id="loginTitle">Entrar a la demo</h2>
+          <p>Es una demostración: puedes usar cualquier usuario y contraseña. No hay registro real, no se guardan contraseñas y no se envía nada a un servidor.</p>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <label for="user">Usuario</label>
+          <div class="field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.6"/>
+              <path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke-linecap="round"/>
+            </svg>
+            <input id="user" name="user" type="text" autocomplete="username" placeholder="tu.usuario" spellcheck="false">
+          </div>
+
+          <label for="pass">Contraseña</label>
+          <div class="field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/>
+              <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" stroke-linecap="round"/>
+            </svg>
+            <input id="pass" name="password" type="password" autocomplete="current-password" placeholder="••••••••">
+            <button type="button" id="togglePass" class="eye" aria-label="Mostrar contraseña" aria-pressed="false">
+              <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M3 3l18 18"/>
+                <path d="M10.6 6.1A9.7 9.7 0 0 1 12 6c6 0 9.5 6 9.5 6a17 17 0 0 1-3 3.6"/>
+                <path d="M6.3 6.3A17 17 0 0 0 2.5 12S6 18 12 18a9.6 9.6 0 0 0 4.1-.9"/>
+                <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="login-row">
+            <label class="check">
+              <input type="checkbox" id="remember" checked>
+              Mantener sesión iniciada
+            </label>
+          </div>
+
+          <p class="form-error" id="loginError" role="alert" hidden></p>
+
+          <button class="btn btn--primary btn--block" type="submit" id="loginBtn">
+            <span class="btn-label">Entrar a la demo</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="hint">
+          <strong>Modo demo:</strong> cualquier usuario y contraseña funcionan. No se almacena la contraseña y el acceso Premium es una simulación local.
+        </div>
+
+        <p class="login-foot">Nexora Digital · demo front-end. Preparada para conectar autenticación y pagos reales en el futuro.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- ================= APP ================= -->
+  <div id="appView" class="app" hidden>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand brand--sm" href="#inicio" aria-label="Nexora Digital, ir al inicio">
+          <span class="logo-mark logo-mark--sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6 18V6l12 12V6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand__text">Nexora <span class="brand__sub">Digital</span></span>
+        </a>
+
+        <nav class="nav" aria-label="Secciones de Nexora Digital">
+          <a href="#servicios">Servicios</a>
+          <a href="#plan">Guía</a>
+          <a href="#clave">Claves</a>
+          <a href="#numeros">Calculadora</a>
+          <a href="#premium" class="nav__premium">Premium <span class="nav__badge">PRO</span></a>
+        </nav>
+
+        <div class="user">
+          <span class="avatar" id="avatar" aria-hidden="true">N</span>
+          <span class="user__name" id="userName">demo</span>
+          <button type="button" class="btn btn--ghost btn--sm" id="logoutBtn">Salir</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <span class="pill pill--mint">Soluciones digitales para pymes · Argentina</span>
+          <h1>Menos tareas manuales. <span class="grad-text">Más consultas atendidas.</span></h1>
+          <p class="lead">Nexora Digital crea páginas web, automatizaciones, chatbots con IA y sistemas de seguimiento para pequeñas y medianas empresas. Resolvemos problemas concretos: consultas que quedan sin responder, presupuestos que nadie retoma y procesos que dependen de la memoria.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#servicios">
+              Ver servicios
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 5v14M6 13l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="btn btn--premium" href="#premium">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="5" y="10" width="14" height="10" rx="2.5"/>
+                <path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10" stroke-linecap="round"/>
+              </svg>
+              Premium
+            </a>
+            <a class="btn btn--ghost" href="#numeros">Calcular escenarios</a>
+          </div>
+
+          <p class="meta-line">
+            <span>Actualizado: noviembre 2026</span>
+            <span aria-hidden="true">·</span>
+            <span>Lectura: 12 min</span>
+            <span aria-hidden="true">·</span>
+            <span>Nivel: desde cero</span>
+            <span aria-hidden="true">·</span>
+            <button type="button" class="meta-link" id="printBtn">Imprimir / PDF</button>
+          </p>
+        </div>
+
+        <aside class="hero-card hero-card--problems" aria-label="Problemas que resuelve Nexora Digital">
+          <div class="card-head">
+            <span>Problemas que resolvemos</span>
+            <span class="live"><span class="live__dot" aria-hidden="true"></span> Diagnóstico</span>
+          </div>
+
+          <ul class="problem-map">
+            <li>
+              <span class="problem-map__from">Falta de clientes</span>
+              <span class="problem-map__arrow" aria-hidden="true">→</span>
+              <span class="problem-map__to">Web clara y presencia local</span>
+            </li>
+            <li>
+              <span class="problem-map__from">Consultas sin responder</span>
+              <span class="problem-map__arrow" aria-hidden="true">→</span>
+              <span class="problem-map__to">Chatbot con IA y avisos</span>
+            </li>
+            <li>
+              <span class="problem-map__from">Tareas repetitivas</span>
+              <span class="problem-map__arrow" aria-hidden="true">→</span>
+              <span class="problem-map__to">Automatizaciones simples</span>
+            </li>
+            <li>
+              <span class="problem-map__from">Presupuestos sin seguimiento</span>
+              <span class="problem-map__arrow" aria-hidden="true">→</span>
+              <span class="problem-map__to">Recordatorios y estado</span>
+            </li>
+            <li>
+              <span class="problem-map__from">Desorden en la atención</span>
+              <span class="problem-map__arrow" aria-hidden="true">→</span>
+              <span class="problem-map__to">Bandeja y CRM básico</span>
+            </li>
+          </ul>
+
+          <p class="hero-card__note">Primero medimos el problema. Después proponemos la solución más simple y un alcance por escrito.</p>
+
+          <div class="float-chip">
+            <span class="float-chip__icon" aria-hidden="true">✓</span>
+            <span><strong>Sin promesas mágicas:</strong> cada propuesta define qué se mide y qué queda fuera.</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats" aria-label="Contenido de la guía">
+        <div class="stats-grid">
+          <div class="stat">
+            <strong data-count="6">6</strong>
+            <span>servicios con precio orientativo en ARS</span>
+          </div>
+          <div class="stat">
+            <strong data-count="5">5</strong>
+            <span>problemas frecuentes de una pyme</span>
+          </div>
+          <div class="stat">
+            <strong data-count="90">90</strong>
+            <span>días de plan para empezar de cero</span>
+          </div>
+          <div class="stat">
+            <strong data-count="8">8</strong>
+            <span>ideas de negocio en Premium</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section class="section services" id="servicios">
+        <div class="section-head">
+          <span class="pill pill--soft">Qué hacemos</span>
+          <h2>Servicios concretos para problemas concretos</h2>
+          <p>No vendemos «transformación digital»: armamos piezas puntuales que ordenan la atención y reducen trabajo manual. Cada servicio incluye alcance, entregables y un precio orientativo en pesos argentinos (ARS).</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__num">01</span>
+              <span class="chip">Presencia</span>
+            </div>
+            <h3>Página web para pymes</h3>
+            <p class="service-card__lead">Una web breve, clara y adaptada a celular para que tus clientes entiendan qué ofreces y cómo contactarte.</p>
+            <dl class="service-facts">
+              <div><dt>Problema que resuelve</dt><dd>Falta de presencia online o una web vieja que no explica la oferta.</dd></div>
+              <div><dt>Qué incluye</dt><dd>Diseño responsive, hasta 5 secciones, textos base, formulario, botón de WhatsApp, SEO técnico inicial y guía de publicación.</dd></div>
+              <div><dt>Para qué negocio</dt><dd>Profesionales independientes, consultorios, talleres, estudios y comercios locales.</dd></div>
+              <div><dt>Ejemplo práctico</dt><dd>Una veterinaria muestra servicios, horarios y turnos por WhatsApp; deja de responder las mismas preguntas por teléfono.</dd></div>
+            </dl>
+            <p class="service-price"><span>Precio orientativo</span><strong>ARS 350.000–650.000</strong><small>Pago único. Varía según secciones, textos y funcionalidades. Dominio y hosting aparte.</small></p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__num">02</span>
+              <span class="chip">Eficiencia</span>
+            </div>
+            <h3>Automatizaciones de tareas</h3>
+            <p class="service-card__lead">Conectamos formularios, planillas, correos y avisos para que dejes de copiar y pegar datos a mano.</p>
+            <dl class="service-facts">
+              <div><dt>Problema que resuelve</dt><dd>Tareas administrativas repetitivas que consumen horas y generan errores.</dd></div>
+              <div><dt>Qué incluye</dt><dd>Mapa del proceso, 1 o 2 automatizaciones, pruebas, documentación y 30 días de soporte para ajustes.</dd></div>
+              <div><dt>Para qué negocio</dt><dd>Negocios con pedidos, turnos, inscripciones o facturación manual.</dd></div>
+              <div><dt>Ejemplo práctico</dt><dd>Cada consulta del formulario crea una fila en la planilla y envía un correo al responsable; nadie vuelve a transcribir.</dd></div>
+            </dl>
+            <p class="service-price"><span>Precio orientativo</span><strong>Desde ARS 180.000</strong><small>Por automatización. Mantenimiento opcional desde ARS 35.000/mes.</small></p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__num">03</span>
+              <span class="chip">IA aplicada</span>
+            </div>
+            <h3>Chatbot con IA</h3>
+            <p class="service-card__lead">Un asistente que responde preguntas frecuentes, toma datos y deriva a una persona cuando hace falta.</p>
+            <dl class="service-facts">
+              <div><dt>Problema que resuelve</dt><dd>Consultas que llegan fuera de horario o se pierden por falta de respuesta.</dd></div>
+              <div><dt>Qué incluye</dt><dd>Base de conocimiento con información aprobada, flujo de preguntas, derivación a humano, pruebas y ajuste mensual.</dd></div>
+              <div><dt>Para qué negocio</dt><dd>Clínicas, inmobiliarias, estudios, talleres y comercios con muchas consultas repetidas.</dd></div>
+              <div><dt>Ejemplo práctico</dt><dd>Un consultorio responde horarios, obras sociales y ubicación; los casos complejos quedan marcados para recepción.</dd></div>
+            </dl>
+            <p class="service-price"><span>Precio orientativo</span><strong>Desde ARS 300.000 + ARS 60.000–120.000/mes</strong><small>Setup + mantenimiento. No incluye el costo del proveedor de IA ni el envío masivo de mensajes.</small></p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__num">04</span>
+              <span class="chip">Ventas</span>
+            </div>
+            <h3>Seguimiento de presupuestos</h3>
+            <p class="service-card__lead">Un sistema simple para saber qué presupuesto está pendiente, quién lo tiene y cuándo volver a contactar.</p>
+            <dl class="service-facts">
+              <div><dt>Problema que resuelve</dt><dd>Presupuestos enviados que quedan en el olvido y ventas que se enfrían.</dd></div>
+              <div><dt>Qué incluye</dt><dd>Plantilla de presupuesto, registro de estado, recordatorios a los 3, 7 y 15 días, textos de seguimiento y tablero básico.</dd></div>
+              <div><dt>Para qué negocio</dt><dd>Contratistas, agencias, estudios, proveedores y equipos comerciales pequeños.</dd></div>
+              <div><dt>Ejemplo práctico</dt><dd>Un proveedor envía 20 presupuestos por mes; el sistema le recuerda a los 3 días los que no recibieron respuesta.</dd></div>
+            </dl>
+            <p class="service-price"><span>Precio orientativo</span><strong>Desde ARS 150.000 + ARS 45.000/mes</strong><small>Implementación + mantenimiento y ajustes. No garantiza más ventas: ordena el seguimiento.</small></p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__num">05</span>
+              <span class="chip">Organización</span>
+            </div>
+            <h3>Atención al cliente ordenada</h3>
+            <p class="service-card__lead">Centralizamos consultas y respuestas frecuentes para que el equipo sepa qué responder y qué sigue.</p>
+            <dl class="service-facts">
+              <div><dt>Problema que resuelve</dt><dd>Mensajes dispersos entre WhatsApp, correo y redes; nadie sabe quién atendió qué.</dd></div>
+              <div><dt>Qué incluye</dt><dd>Definición de canales, respuestas base, etiquetas de estado, responsable por consulta, reporte mensual y capacitación al equipo.</dd></div>
+              <div><dt>Para qué negocio</dt><dd>Equipos de 2 a 20 personas con volumen de consultas y atención compartida.</dd></div>
+              <div><dt>Ejemplo práctico</dt><dd>Un taller registra cada consulta con estado (nuevo, presupuestado, cerrado) y evita responder dos veces lo mismo.</dd></div>
+            </dl>
+            <p class="service-price"><span>Precio orientativo</span><strong>Desde ARS 250.000 + ARS 70.000/mes</strong><small>Implementación + acompañamiento. Según canales, cantidad de personas y volumen.</small></p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__head">
+              <span class="service-card__num">06</span>
+              <span class="chip">Continuidad</span>
+            </div>
+            <h3>Mantenimiento y mejoras</h3>
+            <p class="service-card__lead">Soporte mensual para que la web y las automatizaciones sigan funcionando y se actualicen.</p>
+            <dl class="service-facts">
+              <div><dt>Problema que resuelve</dt><dd>Sitios abandonados, formularios que dejan de enviar y cambios que nunca se hacen.</dd></div>
+              <div><dt>Qué incluye</dt><dd>Monitoreo básico, copias de seguridad, actualizaciones, hasta 2 cambios menores por mes y reporte simple.</dd></div>
+              <div><dt>Para qué negocio</dt><dd>Clientes que ya tienen web o automatizaciones y no quieren depender de una sola persona.</dd></div>
+              <div><dt>Ejemplo práctico</dt><dd>Una inmobiliaria cambia precios y fotos cada mes y recibe aviso si el formulario falla.</dd></div>
+            </dl>
+            <p class="service-price"><span>Precio orientativo</span><strong>ARS 45.000–90.000/mes</strong><small>Según cantidad de sitios y horas de soporte incluidas. Los cambios grandes se presupuestan aparte.</small></p>
+          </article>
+        </div>
+
+        <p class="section-note">
+          <strong>Importante:</strong> los precios son orientativos, en pesos argentinos (ARS) y no incluyen impuestos. El presupuesto final depende del alcance, la urgencia, las herramientas y el tiempo de trabajo. No prometemos resultados de ventas: definimos entregables y criterios de aceptación por escrito. Para facturación, impuestos e inscripción, consulta a un contador.
+        </p>
+      </section>
+
+      <!-- PLAN -->
+      <section class="section" id="plan">
+        <div class="section-head">
+          <span class="pill pill--soft">Guía de inicio</span>
+          <h2>El paso a paso, en orden</h2>
+          <p>Abre cada paso para ver acciones concretas, tiempo estimado, costos orientativos en ARS y el entregable. No avances sin cerrar el entregable anterior: el orden importa más que la velocidad.</p>
+        </div>
+
+        <div class="steps">
+          <details class="step" open>
+            <summary>
+              <span class="step__num">01</span>
+              <span class="step__title-wrap">
+                <span class="step__title">Valida el problema antes de escribir código</span>
+                <span class="step__meta">
+                  <span class="chip">Semana 1</span>
+                  <span class="chip">Costo: ARS 0</span>
+                  <span class="chip chip--hot">Prioridad crítica</span>
+                </span>
+              </span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="step__body">
+              <ul>
+                <li>Elige un <strong>nicho concreto</strong>: clínicas, talleres, inmobiliarias, restaurantes. «Pymes» no es un nicho.</li>
+                <li>Habla con 10 dueños y pregunta cuánto les cuesta el problema: horas perdidas, citas que no se contestan, clientes que se van.</li>
+                <li>Busca la señal de compra: ya pagan por una solución imperfecta (agencia, freelance, Excel, WhatsApp manual).</li>
+                <li>Si nadie paga hoy por resolverlo, cambia de nicho. No de idea.</li>
+              </ul>
+              <p class="deliver"><strong>Entregable:</strong> una página con el problema, el cliente ideal y 3 pruebas de que ya gastan dinero en resolverlo.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step__num">02</span>
+              <span class="step__title-wrap">
+                <span class="step__title">Diseña una oferta cerrada y fácil de comprar</span>
+                <span class="step__meta">
+                  <span class="chip">Semana 2</span>
+                  <span class="chip">Costo: ARS 0</span>
+                  <span class="chip chip--hot">Prioridad crítica</span>
+                </span>
+              </span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="step__body">
+              <ul>
+                <li>Empaqueta 3 servicios: <strong>web express</strong>, <strong>automatización</strong> de citas/seguimiento y <strong>mantenimiento mensual</strong>.</li>
+                <li>Precio fijo por resultado, no por hora. El cliente compra certeza, no tu tiempo.</li>
+                <li>Alcance escrito: qué incluye, qué no, cuántas revisiones y en cuántos días se entrega.</li>
+                <li>Si ofreces una garantía, escríbela con condiciones: qué cubre, qué no, durante cuánto tiempo y cómo se solicita. No prometas devoluciones que no puedas sostener.</li>
+              </ul>
+              <p class="deliver"><strong>Entregable:</strong> PDF de una página con paquetes, precios, plazos y condiciones.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step__num">03</span>
+              <span class="step__title-wrap">
+                <span class="step__title">Formaliza lo mínimo y protégete</span>
+                <span class="step__meta">
+                  <span class="chip">Semana 2-3</span>
+                  <span class="chip">Costo: ARS 0–50.000</span>
+                  <span class="chip">Prioridad alta</span>
+                </span>
+              </span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="step__body">
+              <ul>
+                <li>Define tu situación fiscal con un contador: CUIT, inscripción (por ejemplo, monotributo si corresponde), facturación electrónica en ARCA (ex-AFIP) y cuenta bancaria separada.</li>
+                <li>Contrato de servicio con alcance, pagos <strong>50% al inicio / 50% a la entrega</strong>, propiedad del código, licencias y límite de revisiones.</li>
+                <li>Si tratas datos de clientes, aplica la <strong>Ley 25.326 de Protección de Datos Personales</strong>: informa para qué los usas, guarda solo lo necesario y limita el acceso.</li>
+                <li>Si vendes a consumidores finales, revisa la <strong>Ley 24.240 de Defensa del Consumidor</strong>. Guarda todos los acuerdos por escrito, incluso los cambios pequeños.</li>
+              </ul>
+              <p class="deliver"><strong>Entregable:</strong> plantilla de contrato + datos de facturación + política de privacidad revisada. Este contenido es educativo y no reemplaza asesoramiento legal o contable.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step__num">04</span>
+              <span class="step__title-wrap">
+                <span class="step__title">Construye tu MVP comercial</span>
+                <span class="step__meta">
+                  <span class="chip">Semana 3-5</span>
+                  <span class="chip">Costo: ARS 0–30.000</span>
+                  <span class="chip">Prioridad alta</span>
+                </span>
+              </span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="step__body">
+              <ul>
+                <li>Web de una sola página: problema, solución, 2 demos o casos, precio y botón de agenda.</li>
+                <li>Reutiliza plantillas y automatizaciones propias. No construyas 6 meses antes de vender.</li>
+                <li>Graba una demo de 3 minutos mostrando el <strong>antes y después</strong> con una métrica.</li>
+                <li>Ten un enlace de agenda y una forma de pago funcionando desde el día uno.</li>
+              </ul>
+              <p class="deliver"><strong>Entregable:</strong> web publicada + demo grabada + enlace de agenda + forma de cobro.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step__num">05</span>
+              <span class="step__title-wrap">
+                <span class="step__title">Consigue los 3 primeros clientes</span>
+                <span class="step__meta">
+                  <span class="chip">Semana 4-8</span>
+                  <span class="chip">Costo: ARS 0–40.000</span>
+                  <span class="chip chip--hot">Prioridad crítica</span>
+                </span>
+              </span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="step__body">
+              <ul>
+                <li>Outbound diario: <strong>10 mensajes personalizados</strong> a negocios del nicho, con una mejora concreta que hayas detectado.</li>
+                <li>Alianzas con quien ya atiende a tu cliente ideal: gestores, contables, diseñadores, agencias pequeñas.</li>
+                <li>Precio de lanzamiento a cambio de permiso para documentar el caso con datos verificables. Aun así, <strong>cobra</strong>.</li>
+                <li>Mide: contactos → respuestas → llamadas → propuestas → cierres. Optimiza el eslabón más débil.</li>
+              </ul>
+              <p class="deliver"><strong>Entregable:</strong> 3 contratos firmados y, si el cliente lo autoriza, un caso de estudio con datos verificables. Nunca publiques nombres o números sin permiso.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step__num">06</span>
+              <span class="step__title-wrap">
+                <span class="step__title">Entrega como una máquina, no como un héroe</span>
+                <span class="step__meta">
+                  <span class="chip">Desde el mes 2</span>
+                  <span class="chip">Costo: ARS 0</span>
+                  <span class="chip">Prioridad alta</span>
+                </span>
+              </span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="step__body">
+              <ul>
+                <li>Onboarding estandarizado: formulario, checklist de accesos, fechas y responsable de cada cosa.</li>
+                <li>Documenta procesos (SOPs) y guarda plantillas reutilizables de web, automatización y reportes.</li>
+                <li>Registra las horas reales por proyecto. Si un paquete pierde dinero, sube el precio o reduce el alcance.</li>
+                <li>Pide reseña y referido al terminar cada entrega. Es el canal más barato que existe.</li>
+              </ul>
+              <p class="deliver"><strong>Entregable:</strong> manual de entrega + plantillas + registro de horas y rentabilidad por servicio.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step__num">07</span>
+              <span class="step__title-wrap">
+                <span class="step__title">Escala con recurrencia y producto</span>
+                <span class="step__meta">
+                  <span class="chip">Mes 4 en adelante</span>
+                  <span class="chip">Costo: variable</span>
+                  <span class="chip">Crecimiento</span>
+                </span>
+              </span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="step__body">
+              <ul>
+                <li>Convierte cada entrega en un plan mensual: hosting, soporte, mejoras y reportes (por ejemplo, desde ARS 45.000/mes).</li>
+                <li>Productiza lo que repites: mismo nicho, mismo stack, misma automatización empaquetada.</li>
+                <li>Subcontrata lo repetitivo (contenido, QA, soporte nivel 1) y quédate con ventas y arquitectura.</li>
+                <li>Sube precios a los nuevos clientes cada 3-6 meses. La primera versión siempre es barata.</li>
+              </ul>
+              <p class="deliver"><strong>Entregable:</strong> 10 clientes en recurrencia y un proceso comercial replicable.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- CLAVE -->
+      <section class="section" id="clave">
+        <div class="section-head">
+          <span class="pill pill--soft">Criterios de trabajo</span>
+          <h2>Seis principios para no perder el foco</h2>
+          <p>No son garantías de resultado: son criterios prácticos para elegir clientes, precios y procesos. Vuelve a ellos cuando tengas que tomar una decisión.</p>
+        </div>
+
+        <div class="important-grid">
+          <article class="important-card">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="8.5"/>
+                <circle cx="12" cy="12" r="4.5"/>
+                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+              </svg>
+            </span>
+            <h3>Nicho antes que producto</h3>
+            <p>Un nicho concreto te da un mensaje claro, referidos y precios comparables. La tecnología es el medio; el problema del cliente es el punto de partida.</p>
+          </article>
+
+          <article class="important-card">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.5 13.5l-7 7L4 11V4h7l9.5 9.5Z" stroke-linejoin="round"/>
+                <circle cx="8.5" cy="8.5" r="1.4" fill="currentColor"/>
+              </svg>
+            </span>
+            <h3>Precio por alcance, no por horas</h3>
+            <p>El cliente compra un resultado y un alcance definido. Calcula tus horas reales, deja margen y ajusta el precio cuando cambie el trabajo.</p>
+          </article>
+
+          <article class="important-card">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 8.5h13a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-5Z" stroke-linejoin="round"/>
+                <path d="M17.5 8.5V7a3 3 0 0 0-3-3H6" stroke-linecap="round"/>
+                <path d="M15 3.5l2.5 2.5L15 8.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>Recurrencia para estabilizar</h3>
+            <p>Los proyectos sueltos obligan a vender cada mes desde cero. Un mantenimiento mensual razonable ordena la caja y permite planificar.</p>
+          </article>
+
+          <article class="important-card">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19.5V13M9.3 19.5V9M14.7 19.5v-4M20 19.5V5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <h3>Un embudo simple y medido</h3>
+            <p>Ejemplo: 10 contactos personalizados → 2 conversaciones → 1 propuesta → 1 cierre cada 3 propuestas. Mide tu propio embudo y mejora el eslabón más débil.</p>
+          </article>
+
+          <article class="important-card">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3.5l7.5 3v5.2c0 4.3-3.1 7.7-7.5 8.8-4.4-1.1-7.5-4.5-7.5-8.8V6.5l7.5-3Z" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>Caja y impuestos primero</h3>
+            <p>Cobra una parte al inicio, separa los gastos del negocio y reserva para impuestos. Consulta a un contador antes de fijar precios.</p>
+          </article>
+
+          <article class="important-card">
+            <span class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="3.2"/>
+                <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <h3>Procesos, no héroes</h3>
+            <p>Documenta entregas, plantillas y accesos desde el primer cliente. Si todo depende de tu memoria, el negocio no puede crecer.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CALCULADORA -->
+      <section class="section" id="numeros">
+        <div class="section-head">
+          <span class="pill pill--soft">Calculadora de escenarios</span>
+          <h2>Estima el tamaño de tu negocio</h2>
+          <p>Ajusta los valores y observa cómo cambian los resultados. Son estimaciones matemáticas, no ganancias aseguradas: dependen de los precios que puedas cobrar, la cantidad de clientes, tus costos reales, los impuestos y el tiempo de trabajo.</p>
+        </div>
+
+        <div class="calc">
+          <div class="calc-panel">
+            <div class="control">
+              <div class="control__top">
+                <label for="calcClients">Clientes nuevos al mes</label>
+                <span class="control__val" id="clientsVal">2</span>
+              </div>
+              <input type="range" id="calcClients" min="0" max="10" step="1" value="2">
+              <p class="control__hint">Proyectos cerrados y cobrados, no propuestas enviadas.</p>
+            </div>
+
+            <div class="control">
+              <div class="control__top">
+                <label for="calcTicket">Ticket promedio por proyecto (ARS)</label>
+                <span class="control__val" id="ticketVal">ARS 350.000</span>
+              </div>
+              <input type="range" id="calcTicket" min="50000" max="1500000" step="25000" value="350000">
+              <p class="control__hint">Por ejemplo: una web con textos y formulario.</p>
+            </div>
+
+            <div class="control">
+              <div class="control__top">
+                <label for="calcRetainers">Clientes en plan mensual</label>
+                <span class="control__val" id="retainersVal">6</span>
+              </div>
+              <input type="range" id="calcRetainers" min="0" max="30" step="1" value="6">
+              <p class="control__hint">Clientes que pagan mantenimiento, soporte o mejoras cada mes.</p>
+            </div>
+
+            <div class="control">
+              <div class="control__top">
+                <label for="calcRetainerPrice">Precio del plan mensual (ARS)</label>
+                <span class="control__val" id="retainerPriceVal">ARS 45.000</span>
+              </div>
+              <input type="range" id="calcRetainerPrice" min="10000" max="200000" step="5000" value="45000">
+              <p class="control__hint">Lo que cobras por cliente y por mes, antes de impuestos.</p>
+            </div>
+
+            <div class="control">
+              <div class="control__top">
+                <label for="calcCosts">Costos fijos del mes (ARS)</label>
+                <span class="control__val" id="costsVal">ARS 250.000</span>
+              </div>
+              <input type="range" id="calcCosts" min="0" max="1500000" step="25000" value="250000">
+              <p class="control__hint">Herramientas, internet, gestoría, publicidad y otros gastos del negocio.</p>
+            </div>
+
+            <p class="calc-note">
+              <strong>Fórmulas aplicadas:</strong> proyectos = clientes nuevos × ticket. MRR = clientes mensuales × precio mensual. Resultado = proyectos + MRR − costos fijos. Punto de equilibrio = costos fijos ÷ precio mensual, redondeado hacia arriba.
+            </p>
+          </div>
+
+          <div class="calc-results">
+            <div class="res">
+              <span>Proyectos del mes</span>
+              <strong id="outProjects">ARS 700.000</strong>
+            </div>
+            <div class="res">
+              <span>MRR · ingresos recurrentes</span>
+              <strong id="outMrr">ARS 270.000</strong>
+            </div>
+            <div class="res res--wide">
+              <span>Facturación mensual estimada</span>
+              <strong id="outTotal">ARS 970.000</strong>
+            </div>
+            <div class="res">
+              <span>Costos fijos del mes</span>
+              <strong id="outCosts">ARS 250.000</strong>
+            </div>
+            <div class="res">
+              <span>Resultado estimado / mes</span>
+              <strong id="outProfit">ARS 720.000</strong>
+            </div>
+            <div class="res">
+              <span>Facturación estimada / año</span>
+              <strong id="outYear">ARS 11.640.000</strong>
+            </div>
+            <div class="res">
+              <span>Punto de equilibrio</span>
+              <strong id="outBreakEven">6 clientes</strong>
+            </div>
+            <p class="calc-foot">El resultado estimado es facturación menos costos fijos. Todavía falta descontar impuestos, comisiones de cobro, mora y tus horas de trabajo.</p>
+          </div>
+        </div>
+
+        <div class="calc-defs">
+          <article class="formula-card">
+            <h3>MRR</h3>
+            <p><strong>Monthly Recurring Revenue.</strong> Es el ingreso que se repite cada mes por servicios con suscripción o mantenimiento.</p>
+            <code>Clientes mensuales × precio mensual</code>
+            <small>Ejemplo: 6 × ARS 45.000 = ARS 270.000</small>
+          </article>
+          <article class="formula-card">
+            <h3>CAC</h3>
+            <p><strong>Costo de Adquisición de Cliente.</strong> Es lo que gastas en marketing, ventas y tiempo comercial para conseguir un cliente nuevo.</p>
+            <code>Inversión comercial del período ÷ clientes nuevos</code>
+            <small>Ejemplo: ARS 100.000 ÷ 2 = ARS 50.000 por cliente</small>
+          </article>
+          <article class="formula-card">
+            <h3>LTV</h3>
+            <p><strong>Lifetime Value.</strong> Es el valor estimado que deja un cliente mientras sigue comprando, descontando el costo de entregar el servicio.</p>
+            <code>Precio mensual × meses de permanencia × margen</code>
+            <small>Ejemplo: ARS 45.000 × 24 × 0,70 = ARS 756.000</small>
+          </article>
+          <article class="formula-card">
+            <h3>Punto de equilibrio</h3>
+            <p>Es la cantidad de clientes mensuales necesaria para cubrir los costos fijos. No incluye impuestos ni tu sueldo.</p>
+            <code>Costos fijos ÷ precio mensual</code>
+            <small>Ejemplo: ARS 250.000 ÷ ARS 45.000 = 6 clientes</small>
+          </article>
+        </div>
+
+        <p class="calc-disclaimer">
+          <strong>Estimación, no promesa:</strong> esta calculadora no incluye IVA, monotributo, ingresos brutos, comisiones de pasarelas de pago, ausencias, mora ni meses sin clientes. Usa los resultados para comparar escenarios, no para proyectar ingresos garantizados. Consulta a un contador para tu situación fiscal.
+        </p>
+      </section>
+
+      <!-- PREMIUM -->
+      <section class="section premium" id="premium">
+        <!-- Estado bloqueado -->
+        <div id="premiumLocked">
+          <div class="section-head premium-head">
+            <span class="pill pill--premium">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9L12 3Z" stroke-linejoin="round"/>
+              </svg>
+              Premium · guía práctica
+            </span>
+            <h2>Herramientas para <span class="gold-text">empezar y vender</span> servicios digitales.</h2>
+            <p>Ocho ideas explicadas paso a paso, plantillas editables, guiones de venta, respuestas a objeciones, plan de 90 días y una calculadora de escenarios. Todo el contenido es educativo y los precios son orientativos en ARS.</p>
+          </div>
+
+          <div class="premium-panel">
+            <div class="premium-panel__copy">
+              <span class="premium-kicker">Lo que hay dentro</span>
+              <ul class="premium-perks">
+                <li>
+                  <span class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 19.5V13M9.3 19.5V9M14.7 19.5v-4M20 19.5V5" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>8 ideas con 7 campos</strong>
+                    <span>Qué es, cómo funciona, cómo empezar, herramientas, oferta, ejemplo y precio.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 6.5h16M4 12h16M4 17.5h10" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>Guía y 7 plantillas</strong>
+                    <span>Presupuesto, propuesta, prospección, WhatsApp, correo, seguimiento y acuerdo básico.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M12 3.5l7.5 3v5.2c0 4.3-3.1 7.7-7.5 8.8-4.4-1.1-7.5-4.5-7.5-8.8V6.5l7.5-3Z" stroke-linejoin="round"/>
+                      <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>Ventas sin presión</strong>
+                    <span>Guiones naturales y respuestas honestas a las objeciones más comunes.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="perk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 5.5h16v10H9l-4 3.5V5.5Z" stroke-linejoin="round"/>
+                      <path d="M8 9h8M8 12h5" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>Plan de 90 días y KPIs</strong>
+                    <span>Tres etapas realistas, rutina semanal y métricas explicadas con ejemplos.</span>
+                  </div>
+                </li>
+              </ul>
+
+              <blockquote class="premium-quote">
+                «La ventaja no es tener la herramienta. Es entender el problema, medirlo y entregar una solución que el cliente pueda comprobar.»
+              </blockquote>
+            </div>
+
+            <div class="premium-form-card">
+              <span class="premium-form__tag">Acceso demo · sin pago</span>
+              <h3>Desbloquear la guía</h3>
+              <p class="premium-form__lead">Es una demo educativa: no hay cobro, suscripción ni cuenta real. Escribe un correo para ver el contenido completo en este navegador.</p>
+
+              <form id="premiumForm" novalidate>
+                <label for="premiumEmail">Correo electrónico</label>
+                <div class="field">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/>
+                    <path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <input id="premiumEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@empresa.com" maxlength="120" spellcheck="false">
+                </div>
+                <p class="form-error" id="premiumError" role="alert" hidden></p>
+
+                <button class="btn btn--premium btn--block" type="submit" id="premiumBtn">
+                  <span class="btn-label">Desbloquear la guía</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </form>
+
+              <p class="premium-privacy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/>
+                  <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" stroke-linecap="round"/>
+                </svg>
+                <span>Demo sin backend: el correo se guarda solo en <code>localStorage</code> de este navegador. No se envía, no se cobra y no se crea una cuenta real.</span>
+              </p>
+
+              <div class="premium-proof">
+                <div><strong>8</strong><span>ideas</span></div>
+                <div><strong>7</strong><span>plantillas</span></div>
+                <div><strong>90</strong><span>días</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estado desbloqueado -->
+        <div class="premium-unlocked" id="premiumUnlocked" hidden>
+          <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+          <div class="section-head premium-head">
+            <span class="pill pill--premium">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12.5l4.2 4.2L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Premium demo activo
+            </span>
+            <h2 id="premiumTitle" tabindex="-1">Guía completa para <span class="gold-text">empezar y vender</span>.</h2>
+            <p>Acceso desbloqueado para <strong id="premiumEmailOut">tu correo</strong>. Contenido educativo y plantillas. Los precios son orientativos en ARS y no constituyen una promesa de ingresos.</p>
+            <div class="premium-toolbar">
+              <button type="button" class="btn btn--ghost btn--sm" id="changeEmailBtn">Usar otro correo</button>
+              <button type="button" class="btn btn--ghost btn--sm" id="printPremiumBtn">Imprimir guía</button>
+              <span class="premium-local">Demo local: sin pago ni backend</span>
+            </div>
+          </div>
+
+          <p class="premium-demo-note">
+            <strong>Importante:</strong> este acceso es una simulación. No hay pago, suscripción ni autenticación real. Para convertirlo en un producto pago haría falta un backend con usuarios, permisos y una pasarela de pagos.
+          </p>
+
+          <div class="premium-stats" aria-label="Contenido de la guía">
+            <div><span>Ideas de negocio</span><strong>8</strong><small>con 7 campos cada una</small></div>
+            <div><span>Plantillas</span><strong>7</strong><small>editables y copiables</small></div>
+            <div><span>Plan de inicio</span><strong>90 días</strong><small>en 3 etapas realistas</small></div>
+            <div><span>KPIs</span><strong>6</strong><small>con fórmula y ejemplo</small></div>
+            <div><span>Moneda</span><strong>ARS</strong><small>precios orientativos</small></div>
+          </div>
+
+          <nav class="premium-index" aria-label="Contenido premium">
+            <span>Dentro de la guía</span>
+            <a href="#p-jugadas">8 ideas</a>
+            <a href="#p-guia">Empezar de cero</a>
+            <a href="#p-herramientas">Herramientas</a>
+            <a href="#p-plantillas">Plantillas</a>
+            <a href="#p-guiones">Ventas y objeciones</a>
+            <a href="#p-plan">Plan de 90 días</a>
+            <a href="#p-precios">Precios</a>
+            <a href="#p-auditoria">Auditoría</a>
+            <a href="#p-economia">Economía y legal</a>
+            <a href="#p-kpis">KPIs</a>
+            <a href="#p-errores">Errores</a>
+          </nav>
+
+          <div class="play-list" id="p-jugadas">
+            <details class="play" open>
+              <summary>
+                <span class="play__num">01</span>
+                <span class="play__head">
+                  <span class="play__title">Asistente digital para un nicho</span>
+                  <span class="play__tag">IA aplicada · recurrencia</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Un asistente entrenado con la información del negocio que responde consultas frecuentes, agenda y deriva a una persona cuando no sabe o cuando el caso es delicado.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Se carga una base de conocimiento aprobada (horarios, servicios, precios y preguntas frecuentes). El asistente responde dentro de reglas, registra la conversación y avisa al equipo cuando hace falta intervenir.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Elige un rubro con consultas repetidas. Reúne 30 preguntas reales, arma un prototipo con datos de prueba y haz que 3 personas del rubro lo usen. No empieces por el cliente más grande.</dd></div>
+                  <div><dt>Herramientas</dt><dd>WhatsApp Business, un proveedor de IA con API, Make o n8n para conectar flujos, Google Calendar y una planilla o CRM simple.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>Haz una demostración de 15 minutos con preguntas reales del negocio. Propón un piloto de 30 días con una métrica clara: consultas atendidas, tiempo de respuesta o turnos agendados. Aclara qué no hará el asistente.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>Una clínica dental recibe consultas de noche. El asistente responde horarios, ubicación y obras sociales, y deriva las urgencias a recepción.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>Setup desde ARS 300.000 y mantenimiento de ARS 60.000–120.000/mes según volumen, ajustes y soporte. Cotiza por escrito el límite de mensajes y el costo del proveedor de IA.</dd></div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="play">
+              <summary>
+                <span class="play__num">02</span>
+                <span class="play__head">
+                  <span class="play__title">Precio por resultado</span>
+                  <span class="play__tag">Modelo variable · medición</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Un modelo donde una parte del precio depende de un resultado medible: una cita recuperada, un presupuesto que avanza o una hora ahorrada.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Se define una línea base, la forma de medir y el período de prueba. El cliente puede verificar el resultado en su propia herramienta. La parte variable se cobra solo sobre resultados comprobados.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Elige un proceso fácil de medir y con volumen suficiente. Mide 14 días antes de tocar nada. Define qué cuenta como resultado y qué no. Prueba el cálculo con un cliente piloto.</dd></div>
+                  <div><dt>Herramientas</dt><dd>Planilla compartida, CRM, etiquetas de WhatsApp Business y un formulario de registro.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>Propón una parte fija por el trabajo y una variable por resultado, con tope mensual. Explica que no garantizas un mínimo de resultados.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>Un taller envía presupuestos y pierde el seguimiento. Se cobra ARS 45.000/mes fijo y ARS 3.000 por presupuesto que avanza a revisión, con tope de 15 por mes.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>Fijo de ARS 45.000–90.000/mes + ARS 2.000–5.000 por resultado verificado. Todo por escrito: fórmula, fuente del dato, tope y qué pasa si el cliente no responde.</dd></div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="play">
+              <summary>
+                <span class="play__num">03</span>
+                <span class="play__head">
+                  <span class="play__title">Micro-SaaS vertical</span>
+                  <span class="play__tag">Producto · suscripción</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Un software pequeño para un solo rubro, que resuelve una tarea repetitiva y se cobra por suscripción.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Primero entregas el servicio a mano a varios clientes. Cuando el proceso es idéntico, construyes la versión mínima y migras a los clientes existentes.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Consigue 5 clientes del mismo rubro con un servicio manual. Documenta cada paso. Automatiza solo lo que repites todas las semanas. No construyas antes de cobrar.</dd></div>
+                  <div><dt>Herramientas</dt><dd>Airtable o Google Sheets, Softr o Glide para la interfaz, Supabase para datos, Mercado Pago o Stripe para cobros y un hosting simple.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>Véndelo como evolución del servicio actual, no como una app genérica. Muestra el antes y el después con un cliente real y pide permiso para usarlo como referencia.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>Un sistema de turnos para peluquerías con recordatorio y lista de espera; el peluquero ve su agenda y el dueño ve la ocupación.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>ARS 15.000–40.000/mes por cliente según funciones. Empieza con 3–5 clientes y un plan anual opcional. No prometas funciones que todavía no existen.</dd></div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="play">
+              <summary>
+                <span class="play__num">04</span>
+                <span class="play__head">
+                  <span class="play__title">Informe del nicho</span>
+                  <span class="play__tag">Autoridad · contenido</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Un relevamiento periódico con datos agregados del sector: tiempos de respuesta, canales, preguntas frecuentes y procesos.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Reúnes datos con consentimiento o de fuentes públicas, los anonimizas y publicas un informe breve. El informe te da autoridad y abre conversaciones comerciales.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Elige 20 negocios de un rubro. Mide 3 variables simples y consistentes. Arma un PDF de 4 páginas con metodología y límites. Nunca inventes datos ni publiques nombres sin permiso.</dd></div>
+                  <div><dt>Herramientas</dt><dd>Planilla, Google Forms, Canva o Figma, una página web simple y una lista de correo.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>Publica la versión resumida gratis y usa la completa como material de venta o contenido para clientes. Envía el informe a negocios del rubro con una observación útil, no con spam.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>«Cómo responden las inmobiliarias de Rosario a las consultas por WhatsApp»: 20 casos, datos agregados y una lista de mejoras.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>Gratis para posicionarte o ARS 30.000–60.000 por la versión completa. También puede incluirse en una consultoría. Si no tienes datos suficientes, no publiques conclusiones.</dd></div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="play">
+              <summary>
+                <span class="play__num">05</span>
+                <span class="play__head">
+                  <span class="play__title">Atención fuera de horario</span>
+                  <span class="play__tag">Disponibilidad · recurrencia</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Un sistema de respuesta rápida para consultas que llegan cuando el negocio está cerrado.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Un mensaje automático recibe la consulta, hace 2 o 3 preguntas guiadas, ofrece horarios y agenda. Si el caso es complejo, avisa al equipo para que responda al día siguiente.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Mide cuántas consultas llegan fuera de horario durante dos semanas. Diseña un flujo de 5 pasos y pruébalo con tu propio número. Mide cuántas se resuelven sin intervención.</dd></div>
+                  <div><dt>Herramientas</dt><dd>WhatsApp Business, un chatbot, agenda online, correo y una planilla de seguimiento.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>Ofrece un piloto de 30 días con reporte semanal. Deja claro el horario de atención humana y qué consultas se derivan siempre.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>Un estudio jurídico recibe consultas de noche; el sistema agenda primeras entrevistas y separa los casos urgentes.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>Setup de ARS 150.000–300.000 + ARS 80.000–150.000/mes. Ajusta según cantidad de consultas y horas de soporte.</dd></div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="play">
+              <summary>
+                <span class="play__num">06</span>
+                <span class="play__head">
+                  <span class="play__title">Automatización con condiciones claras</span>
+                  <span class="play__tag">Proyecto · ticket medio</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Un proyecto de automatización con alcance, entregables y criterios de aceptación definidos antes de empezar.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Auditoría breve, priorización por impacto y esfuerzo, implementación por fases, capacitación y documentación. Si algo no se puede medir, se declara como supuesto.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Ofrece una auditoría pagada de 3 días. No prometas ahorros antes de medir. Empieza por un proceso pequeño y repetible; documenta el antes y el después.</dd></div>
+                  <div><dt>Herramientas</dt><dd>Make, n8n o Zapier, Google Workspace, Notion, Loom para grabar explicaciones y una planilla de seguimiento.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>Presenta una propuesta de 1 página con alcance, lo que no incluye, supuestos, plazo, precio y criterio de aceptación. Si ofreces garantía, define condiciones y límites por escrito.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>Una distribuidora carga pedidos dos veces. Se automatiza el aviso de vencimientos y se mide el tiempo administrativo antes y después.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>Auditoría ARS 150.000–350.000. Implementación ARS 400.000–1.200.000 según alcance. Mantenimiento opcional desde ARS 45.000/mes. No prometas devoluciones sin condiciones reales.</dd></div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="play">
+              <summary>
+                <span class="play__num">07</span>
+                <span class="play__head">
+                  <span class="play__title">Licencia tu método</span>
+                  <span class="play__tag">Apalancamiento · formación</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Empaquetar un proceso que ya probaste y enseñarlo a otros freelancers o agencias, con documentación y licencia de uso.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Solo después de 3–5 proyectos repetibles, escribes el manual, las plantillas y los criterios de calidad. Das una capacitación y acompañas la primera implementación.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Documenta un proyecto de principio a fin. Prueba el material con un colega. Corrige lo que no se entienda. No vendas licencias si nunca entregaste el servicio.</dd></div>
+                  <div><dt>Herramientas</dt><dd>Notion, Google Drive, Loom, una plataforma de cursos simple y firma digital.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>A freelancers y agencias que ya tienen clientes y quieren reducir errores. No a principiantes sin cartera. Muestra el proceso, no solo el resultado.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>Licencia de un sistema de seguimiento de presupuestos para estudios contables, con plantillas y una sesión de implementación.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>ARS 300.000–800.000 por licencia y formación. Regalías solo con contrato, soporte y métricas claras. Empieza con un grupo pequeño.</dd></div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="play">
+              <summary>
+                <span class="play__num">08</span>
+                <span class="play__head">
+                  <span class="play__title">Diagnóstico de procesos</span>
+                  <span class="play__tag">Entrada · consultoría</span>
+                </span>
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="play__body">
+                <dl class="play-fields">
+                  <div><dt>Qué es</dt><dd>Un análisis pagado de dónde se pierde tiempo o dinero y qué conviene automatizar primero.</dd></div>
+                  <div><dt>Cómo funciona</dt><dd>Entrevistas, observación del proceso, medición de tiempos y un informe con prioridades. El objetivo es decidir, no impresionar con diapositivas.</dd></div>
+                  <div><dt>Cómo empezar desde cero</dt><dd>Arma un cuestionario de 20 preguntas y una plantilla de informe. Haz 3 diagnósticos a conocidos para practicar y pide feedback honesto. Cobra desde el cuarto.</dd></div>
+                  <div><dt>Herramientas</dt><dd>Notion o Google Docs, planilla, Miro o FigJam, Loom y una plantilla de propuesta.</dd></div>
+                  <div><dt>Cómo ofrecerlo</dt><dd>Reunión de 45 minutos, informe de 5 páginas y presentación de 30 minutos. Al final, propone un piloto pequeño o ningún proyecto si no hay un problema claro.</dd></div>
+                  <div><dt>Ejemplo práctico</dt><dd>Una distribuidora tiene pedidos por WhatsApp y una planilla duplicada; se prioriza un formulario único y un aviso automático.</dd></div>
+                  <div><dt>Cómo cobrar</dt><dd>ARS 150.000–400.000 según tamaño y profundidad. Si el cliente contrata la implementación, puedes descontar parte del diagnóstico con una condición escrita.</dd></div>
+                </dl>
+              </div>
+            </details>
+          </div>
+
+          <div class="premium-block" id="p-guia">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Desde cero</span>
+              <h3>Guía para empezar sin experiencia</h3>
+              <p>Un recorrido realista. No necesitas renunciar a tu trabajo ni invertir dinero que no puedas perder. La constancia importa más que la velocidad.</p>
+            </div>
+
+            <ol class="guide-steps">
+              <li>
+                <span class="guide-steps__num">01</span>
+                <div>
+                  <h4>Elige un problema, no una herramienta</h4>
+                  <p>Anota 10 problemas que veas en negocios cercanos: consultas sin responder, turnos anotados en papel, presupuestos que no se siguen. Elige uno que se repita y que alguien ya esté intentando resolver.</p>
+                </div>
+              </li>
+              <li>
+                <span class="guide-steps__num">02</span>
+                <div>
+                  <h4>Acota un rubro</h4>
+                  <p>«Pymes» es demasiado amplio. Empieza por un rubro concreto: clínicas, talleres, inmobiliarias, estudios contables o comercios de un barrio. Un mensaje específico consigue más respuestas que uno genérico.</p>
+                </div>
+              </li>
+              <li>
+                <span class="guide-steps__num">03</span>
+                <div>
+                  <h4>Aprende una herramienta base</h4>
+                  <p>Elige una sola: web, automatización o asistente con IA. Dedica 10 horas por semana durante un mes. No necesitas certificaciones: necesitas construir algo que funcione y saber explicarlo.</p>
+                </div>
+              </li>
+              <li>
+                <span class="guide-steps__num">04</span>
+                <div>
+                  <h4>Crea dos ejemplos propios</h4>
+                  <p>Haz una demo con datos ficticios y otra con un caso de práctica. Aclara siempre que son ejemplos, no clientes reales. Graba un video de 3 minutos mostrando el antes y el después.</p>
+                </div>
+              </li>
+              <li>
+                <span class="guide-steps__num">05</span>
+                <div>
+                  <h4>Define una oferta y un precio</h4>
+                  <p>Escribe qué incluye, qué no incluye, cuánto tarda y cuánto cuesta en ARS. Calcula tus horas y tus costos. Si no sabes cuánto cobrar, empieza con un precio de prueba y ajusta después de los primeros proyectos.</p>
+                </div>
+              </li>
+              <li>
+                <span class="guide-steps__num">06</span>
+                <div>
+                  <h4>Consigue tus primeros tres clientes</h4>
+                  <p>Habla con conocidos, colegas y negocios de tu barrio. Envía mensajes personalizados con una observación concreta. Ofrece un primer proyecto pequeño y cobrado; no regales trabajo sin un límite claro.</p>
+                </div>
+              </li>
+              <li>
+                <span class="guide-steps__num">07</span>
+                <div>
+                  <h4>Mide, documenta y repite</h4>
+                  <p>Registra horas, costos y resultados de cada proyecto. Guarda plantillas y procesos. Al terminar, pide feedback y permiso para usar el caso. Repite lo que funcionó y elimina lo que no.</p>
+                </div>
+              </li>
+            </ol>
+
+            <p class="premium-note"><strong>Realidad:</strong> los primeros proyectos suelen tardar más y pagar menos de lo esperado. Es normal. Ajusta el alcance, sube el precio cuando tengas evidencia y no prometas resultados que no puedas medir.</p>
+          </div>
+
+          <div class="premium-block" id="p-herramientas">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Caja de herramientas</span>
+              <h3>Herramientas recomendadas</h3>
+              <p>No necesitas todas. Elige una por categoría, aprende a usarla y evita cambiar de stack cada mes. Verifica precios y planes antes de proponerlos a un cliente.</p>
+            </div>
+
+            <div class="tools-grid">
+              <article class="tool-group">
+                <h4>Páginas web</h4>
+                <ul>
+                  <li><strong>WordPress + Elementor</strong><span>Rápido para sitios de contenido y clientes que quieren editar.</span></li>
+                  <li><strong>Astro</strong><span>Sitios rápidos y simples si sabes un poco de código.</span></li>
+                  <li><strong>Carrd o Framer</strong><span>Landing pages y portfolios en pocas horas.</span></li>
+                </ul>
+              </article>
+
+              <article class="tool-group">
+                <h4>Automatizaciones</h4>
+                <ul>
+                  <li><strong>Make</strong><span>Flujos visuales para conectar formularios, correo y planillas.</span></li>
+                  <li><strong>n8n</strong><span>Alternativa autoalojable para flujos más técnicos.</span></li>
+                  <li><strong>Zapier</strong><span>Integraciones simples cuando el cliente ya usa esas apps.</span></li>
+                </ul>
+              </article>
+
+              <article class="tool-group">
+                <h4>IA aplicada</h4>
+                <ul>
+                  <li><strong>OpenAI API</strong><span>Para asistentes y clasificación de consultas.</span></li>
+                  <li><strong>Google Gemini API</strong><span>Alternativa para prototipos y análisis de texto.</span></li>
+                  <li><strong>Anthropic API</strong><span>Otra opción para asistentes con instrucciones largas.</span></li>
+                </ul>
+              </article>
+
+              <article class="tool-group">
+                <h4>Diseño</h4>
+                <ul>
+                  <li><strong>Figma</strong><span>Wireframes, prototipos y sistemas de diseño simples.</span></li>
+                  <li><strong>Canva</strong><span>Presentaciones, informes y piezas para redes.</span></li>
+                </ul>
+              </article>
+
+              <article class="tool-group">
+                <h4>Formularios y agenda</h4>
+                <ul>
+                  <li><strong>Tally o Google Forms</strong><span>Formularios rápidos y gratuitos para empezar.</span></li>
+                  <li><strong>Cal.com o Google Calendar</strong><span>Agenda y reservas de reuniones.</span></li>
+                  <li><strong>Typeform</strong><span>Formularios más cuidados cuando el volumen lo justifica.</span></li>
+                </ul>
+              </article>
+
+              <article class="tool-group">
+                <h4>Gestión de clientes</h4>
+                <ul>
+                  <li><strong>Notion</strong><span>Base de clientes, procesos y documentación.</span></li>
+                  <li><strong>Airtable</strong><span>Tableros y bases de datos simples.</span></li>
+                  <li><strong>Trello o HubSpot Free</strong><span>Seguimiento de tareas y oportunidades.</span></li>
+                </ul>
+              </article>
+
+              <article class="tool-group">
+                <h4>Comunicación</h4>
+                <ul>
+                  <li><strong>WhatsApp Business</strong><span>Etiquetas, respuestas rápidas y catálogo básico.</span></li>
+                  <li><strong>Google Workspace</strong><span>Correo profesional y documentos compartidos.</span></li>
+                </ul>
+              </article>
+
+              <article class="tool-group">
+                <h4>Cobros</h4>
+                <ul>
+                  <li><strong>Mercado Pago</strong><span>Links de pago y transferencias en Argentina.</span></li>
+                  <li><strong>Stripe</strong><span>Alternativa para cobros internacionales.</span></li>
+                </ul>
+              </article>
+            </div>
+
+            <p class="premium-note"><strong>Transparencia:</strong> las herramientas y sus precios cambian. No estamos afiliados a estas marcas. Antes de proponer una herramienta, verifica que el cliente pueda pagarla y mantenerla.</p>
+          </div>
+
+          <div class="premium-block" id="p-plantillas">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Copiar y editar</span>
+              <h3>Siete plantillas profesionales</h3>
+              <p>Están escritas en texto plano para que las adaptes a cada cliente. Reemplaza lo que está entre corchetes, revisa los importes y borra lo que no aplique. El botón copia el contenido al portapapeles.</p>
+            </div>
+
+            <div class="template-grid">
+              <article class="template-card">
+                <div class="template-card__head">
+                  <div><span class="chip">Ventas</span><h4>Presupuesto</h4></div>
+                  <button type="button" class="btn btn--ghost btn--sm copy-btn" data-copy-target="tpl-presupuesto">Copiar</button>
+                </div>
+                <textarea class="template-body" id="tpl-presupuesto" rows="16" spellcheck="false" aria-label="Plantilla de presupuesto">PRESUPUESTO
+Nexora Digital — [Tu nombre]
+Cliente: [Nombre del negocio]
+Fecha: [dd/mm/aaaa]
+Validez: 15 días
+
+Servicio: [Página web / Automatización / Asistente con IA]
+Alcance:
+- [Ítem 1]
+- [Ítem 2]
+No incluye: [dominio, hosting, textos, licencias, etc.]
+
+Inversión: ARS [monto]
+Forma de pago: [50% al inicio / 50% a la entrega]
+Plazo de entrega: [X] días hábiles desde la aprobación y el pago inicial.
+Revisiones incluidas: [2]
+
+Condiciones: los precios son en pesos argentinos (ARS) y pueden variar si cambia el alcance. Impuestos según corresponda; consulta a un contador.</textarea>
+              </article>
+
+              <article class="template-card">
+                <div class="template-card__head">
+                  <div><span class="chip">Ventas</span><h4>Propuesta comercial</h4></div>
+                  <button type="button" class="btn btn--ghost btn--sm copy-btn" data-copy-target="tpl-propuesta">Copiar</button>
+                </div>
+                <textarea class="template-body" id="tpl-propuesta" rows="16" spellcheck="false" aria-label="Plantilla de propuesta comercial">PROPUESTA
+Para: [Negocio] — Atención: [Nombre]
+De: [Tu nombre] — Nexora Digital
+
+1. Situación actual: [problema medido o descrito por el cliente]
+2. Objetivo: [resultado esperado, sin garantizarlo]
+3. Solución propuesta: [qué haremos]
+4. Entregables: [lista concreta]
+5. Plazo: [fecha o cantidad de días hábiles]
+6. Inversión: ARS [monto] + [condiciones de pago]
+7. Qué necesitamos del equipo del cliente: [accesos, información, horas de reunión]
+8. Criterio de aceptación: [cómo se comprueba que está terminado]
+9. Próximo paso: [reunión / firma / pago inicial]
+
+Nota: esta propuesta no promete resultados de ventas. Define un alcance y una forma de medir el trabajo.</textarea>
+              </article>
+
+              <article class="template-card">
+                <div class="template-card__head">
+                  <div><span class="chip">Prospección</span><h4>Mensaje para conseguir clientes</h4></div>
+                  <button type="button" class="btn btn--ghost btn--sm copy-btn" data-copy-target="tpl-prospeccion">Copiar</button>
+                </div>
+                <textarea class="template-body" id="tpl-prospeccion" rows="14" spellcheck="false" aria-label="Plantilla de mensaje de prospección">Asunto: Una idea para [Negocio]
+
+Hola [Nombre]:
+
+Vi que [Negocio] [observación concreta y verificable].
+Trabajo con [rubro] en [ciudad] ayudando a ordenar [proceso].
+Preparé una idea simple para [mejora concreta]. ¿Te interesa que te la comparta en un correo de tres líneas?
+
+Si no es el momento, no hay problema. Gracias por el tiempo.
+
+[Tu nombre] · Nexora Digital</textarea>
+              </article>
+
+              <article class="template-card">
+                <div class="template-card__head">
+                  <div><span class="chip">Prospección</span><h4>Mensaje de WhatsApp</h4></div>
+                  <button type="button" class="btn btn--ghost btn--sm copy-btn" data-copy-target="tpl-whatsapp">Copiar</button>
+                </div>
+                <textarea class="template-body" id="tpl-whatsapp" rows="12" spellcheck="false" aria-label="Plantilla de mensaje de WhatsApp">Hola [Nombre], soy [Tu nombre] de Nexora Digital. Trabajo con [rubro] en [ciudad].
+
+Vi que [observación concreta]. Te puedo mostrar una idea para [mejora] en 15 minutos, sin compromiso.
+
+¿Te queda mejor [día] a las [hora] o [día] a las [hora]?
+
+Si preferís que no te escriba más, decímelo y no insisto.</textarea>
+              </article>
+
+              <article class="template-card">
+                <div class="template-card__head">
+                  <div><span class="chip">Prospección</span><h4>Correo para contactar empresas</h4></div>
+                  <button type="button" class="btn btn--ghost btn--sm copy-btn" data-copy-target="tpl-correo">Copiar</button>
+                </div>
+                <textarea class="template-body" id="tpl-correo" rows="14" spellcheck="false" aria-label="Plantilla de correo para contactar empresas">Asunto: Consulta sobre [proceso] en [Empresa]
+
+Hola [Nombre]:
+
+Me comunico porque [motivo concreto]. Ayudo a empresas de [rubro] a [mejora] con [tipo de solución].
+
+No sé si es prioridad para ustedes hoy. Si les interesa, puedo enviar un resumen de una página con una propuesta concreta.
+
+Quedo atento. Gracias por el tiempo.
+
+[Tu nombre] · [teléfono] · [correo]</textarea>
+              </article>
+
+              <article class="template-card">
+                <div class="template-card__head">
+                  <div><span class="chip">Seguimiento</span><h4>Mensaje de seguimiento</h4></div>
+                  <button type="button" class="btn btn--ghost btn--sm copy-btn" data-copy-target="tpl-seguimiento">Copiar</button>
+                </div>
+                <textarea class="template-body" id="tpl-seguimiento" rows="12" spellcheck="false" aria-label="Plantilla de mensaje de seguimiento">Hola [Nombre]:
+
+Te escribo para retomar [presupuesto/proyecto] que enviamos el [fecha].
+¿Pudiste revisarlo? Si necesitás que ajuste el alcance o el precio, decime y lo vemos.
+
+Si hoy no es prioridad, lo dejo en pausa y te vuelvo a escribir en [fecha].
+
+Gracias,
+[Tu nombre]</textarea>
+              </article>
+
+              <article class="template-card">
+                <div class="template-card__head">
+                  <div><span class="chip">Legal</span><h4>Acuerdo básico de servicios</h4></div>
+                  <button type="button" class="btn btn--ghost btn--sm copy-btn" data-copy-target="tpl-acuerdo">Copiar</button>
+                </div>
+                <textarea class="template-body" id="tpl-acuerdo" rows="20" spellcheck="false" aria-label="Plantilla de acuerdo básico de servicios">ACUERDO BÁSICO DE PRESTACIÓN DE SERVICIOS
+Entre [Prestador] (CUIT [número]) y [Cliente] (CUIT/CUIL [número]).
+
+1. Objeto: [servicio y alcance detallado]
+2. Plazo: [fecha de inicio y entrega]
+3. Precio: ARS [monto], forma de pago [condiciones]
+4. Entregables y criterios de aceptación: [detalle]
+5. Revisiones incluidas: [cantidad y límites]
+6. Propiedad y licencias: [qué usa el cliente y qué queda en manos del prestador]
+7. Datos personales: ambas partes cumplirán la Ley 25.326 de Protección de Datos Personales.
+8. Confidencialidad: [qué información se protege y por cuánto tiempo]
+9. Cancelación: [condiciones y aviso previo]
+10. Resolución de conflictos: [jurisdicción y mecanismo]
+
+Este modelo es educativo y no reemplaza asesoramiento legal. Hazlo revisar por un abogado antes de usarlo. No incluye cláusulas específicas de tu actividad.</textarea>
+              </article>
+            </div>
+
+            <p class="premium-note"><strong>Aviso legal:</strong> las plantillas son modelos generales. Cada acuerdo debe revisarse según la legislación aplicable y la situación de las partes. No constituyen asesoramiento legal ni garantizan la validez frente a terceros.</p>
+          </div>
+
+          <div class="premium-block" id="p-guiones">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Ventas naturales</span>
+              <h3>Guiones para conversar, no para spamear</h3>
+              <p>Personaliza el nombre, el negocio y la observación concreta. Un mensaje que demuestra que miraste el negocio funciona mejor que uno genérico. No envíes el mismo texto a 200 personas.</p>
+            </div>
+
+            <div class="script-grid">
+              <article class="script-card">
+                <div class="script-card__top"><span class="chip">Email</span><span class="script-card__meta">Primer contacto</span></div>
+                <h4>Una observación, una pregunta</h4>
+                <p class="script-line"><strong>Asunto:</strong> Una idea para [Negocio]</p>
+                <p class="script-line">Hola [Nombre]:</p>
+                <p class="script-line">Vi que [Negocio] [observación concreta: responde consultas solo por teléfono / no tiene horarios publicados / los presupuestos se piden por WhatsApp].</p>
+                <p class="script-line">Trabajo con [rubro] y preparé una idea para [mejora concreta]. ¿Te interesa que te la comparta en tres líneas?</p>
+                <p class="script-line">Si no es el momento, no hay problema. Gracias.</p>
+                <p class="script-line">— [Tu nombre], Nexora Digital</p>
+              </article>
+
+              <article class="script-card">
+                <div class="script-card__top"><span class="chip">WhatsApp</span><span class="script-card__meta">Conversación breve</span></div>
+                <h4>Mensaje de cuatro líneas</h4>
+                <p class="script-line">Hola [Nombre], soy [Tu nombre] de Nexora Digital.</p>
+                <p class="script-line">Trabajo con [rubro] en [ciudad] y vi que [observación concreta].</p>
+                <p class="script-line">Te puedo mostrar una idea para [mejora] en 15 minutos, sin compromiso.</p>
+                <p class="script-line">¿Te queda mejor [día] a las [hora] o [día] a las [hora]? Si preferís que no te escriba más, decímelo.</p>
+              </article>
+
+              <article class="script-card">
+                <div class="script-card__top"><span class="chip">Llamada</span><span class="script-card__meta">20 minutos</span></div>
+                <h4>Apertura, diagnóstico y próximo paso</h4>
+                <p class="script-line"><strong>Apertura:</strong> «Hola, soy [nombre]. Trabajo con [rubro] y vi una oportunidad concreta en [proceso]. ¿Tienes 3 minutos o te llamo a mejor hora?»</p>
+                <p class="script-line"><strong>Diagnóstico:</strong> ¿Cuántas consultas recibes al mes? ¿Cuántas se responden fuera de horario? ¿Qué pasa con los presupuestos que no avanzan? ¿Cuánto tiempo dedica el equipo a tareas repetitivas?</p>
+                <p class="script-line"><strong>Próximo paso:</strong> «Con esos números, te propongo un piloto pequeño. Te envío el alcance y el precio hoy; lo revisamos el [día] y decides sin presión.»</p>
+              </article>
+            </div>
+
+            <div class="premium-subhead">
+              <h4>Las objeciones más comunes, respondidas sin presión</h4>
+              <p>No rebatas. Escucha, reformula y deja que el cliente decida con información. Si el problema no justifica la inversión, es mejor retirarse.</p>
+            </div>
+            <ul class="objection-list">
+              <li><strong>«Es muy caro»</strong><p>«Entiendo. Antes de hablar de precio, veamos el costo de no resolverlo: cuántas horas o consultas se pierden por mes. Si el número no justifica la inversión, no te lo recomiendo. ¿Revisamos tus datos?»</p></li>
+              <li><strong>«Lo voy a pensar»</strong><p>«Claro. ¿Qué información te falta para decidir: alcance, precio, plazo o una referencia? Te la envío y coordinamos una fecha para retomar. Si no es prioridad, decímelo y no insisto.»</p></li>
+              <li><strong>«No necesito ese servicio»</strong><p>«Puede ser. ¿Qué parte del proceso ya tienes resuelta? Si no hay un problema concreto, no tiene sentido avanzar. Te dejo una idea para cuando lo necesites.»</p></li>
+              <li><strong>«Ya tengo una página web»</strong><p>«Perfecto, no hace falta rehacerla. La pregunta es si esa web está generando consultas y qué pasa después de que alguien escribe. Podemos revisar solo el seguimiento.»</p></li>
+              <li><strong>«No confío en la inteligencia artificial»</strong><p>«Es razonable. La IA no decide por ti: responde preguntas frecuentes con información aprobada y deriva a una persona cuando no sabe. Puedes revisar cada respuesta y pausarla cuando quieras. Empezamos con un proceso pequeño.»</p></li>
+              <li><strong>«No tengo tiempo»</strong><p>«Lo entiendo. El piloto requiere [X] horas tuyas al inicio y el resto lo hacemos nosotros. Si ni eso es posible, es mejor esperar a tener disponibilidad.»</p></li>
+            </ul>
+          </div>
+
+          <div class="premium-block" id="p-plan">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">90 días</span>
+              <h3>Plan de inicio en tres etapas</h3>
+              <p>Pensado para alguien que empieza sin experiencia. No es una carrera contra el calendario: si necesitas más días, ajusta el ritmo. Lo importante es cerrar cada etapa con algo concreto.</p>
+            </div>
+
+            <div class="stage-grid">
+              <article class="stage-card">
+                <span class="stage-card__days">Días 1–30</span>
+                <h4>Aprender, preparar y crear ejemplos</h4>
+                <p>El objetivo no es conseguir clientes, sino tener algo claro para mostrar.</p>
+                <ul>
+                  <li>Elegir un rubro y un servicio principal.</li>
+                  <li>Aprender una herramienta base durante 10 horas por semana.</li>
+                  <li>Crear dos demos con datos ficticios y explicar que son ejemplos.</li>
+                  <li>Escribir oferta, alcance, plazos y precios en ARS.</li>
+                  <li>Preparar perfiles, plantillas y una forma de cobro.</li>
+                  <li>Consultar a un contador sobre CUIT, inscripción y facturación.</li>
+                </ul>
+                <span class="stage-card__out">Al terminar: una oferta clara y dos ejemplos presentables.</span>
+              </article>
+
+              <article class="stage-card">
+                <span class="stage-card__days">Días 31–60</span>
+                <h4>Buscar clientes y conseguir los primeros proyectos</h4>
+                <p>La prospección se convierte en la tarea principal del día.</p>
+                <ul>
+                  <li>Armar una lista de 50 negocios del rubro.</li>
+                  <li>Enviar 5–10 mensajes personalizados por día y hacer seguimiento.</li>
+                  <li>Mantener 2 conversaciones o demos por semana.</li>
+                  <li>Enviar propuestas con alcance y precio por escrito.</li>
+                  <li>Cerrar 1 o 2 proyectos pagos, aunque sean pequeños.</li>
+                  <li>Medir la situación inicial antes de implementar.</li>
+                </ul>
+                <span class="stage-card__out">Al terminar: 1–2 clientes y un caso documentado con permiso.</span>
+              </article>
+
+              <article class="stage-card">
+                <span class="stage-card__days">Días 61–90</span>
+                <h4>Mejorar, ordenar procesos y buscar recurrencia</h4>
+                <p>El foco pasa de conseguir cualquier cliente a construir un proceso repetible.</p>
+                <ul>
+                  <li>Entregar con alcance, documentación y criterios de aceptación.</li>
+                  <li>Pedir feedback y permiso para usar el caso.</li>
+                  <li>Ofrecer un plan mensual de mantenimiento o mejoras.</li>
+                  <li>Ordenar plantillas, tiempos y accesos por cliente.</li>
+                  <li>Revisar costos, precios y rentabilidad real.</li>
+                  <li>Elegir una sola mejora para el siguiente trimestre.</li>
+                </ul>
+                <span class="stage-card__out">Al terminar: un cliente recurrente y un proceso que puedas repetir.</span>
+              </article>
+            </div>
+
+            <div class="premium-subhead">
+              <h4>Rutina semanal sugerida</h4>
+              <p>Bloques de 90 minutos, siempre a la misma hora. Lo que no está en el calendario no existe.</p>
+            </div>
+            <ul class="weekly-grid">
+              <li><span>Lunes</span><strong>Prospección</strong><p>5–10 mensajes nuevos y 10 seguimientos.</p></li>
+              <li><span>Martes</span><strong>Aprendizaje y demos</strong><p>Practicar la herramienta y mostrar ejemplos.</p></li>
+              <li><span>Miércoles</span><strong>Entrega</strong><p>Implementación y documentación del proyecto.</p></li>
+              <li><span>Jueves</span><strong>Propuestas</strong><p>Enviar propuestas y ordenar el seguimiento.</p></li>
+              <li><span>Viernes</span><strong>Números</strong><p>Revisar caja, KPIs y aprendizajes de la semana.</p></li>
+            </ul>
+
+            <p class="premium-note"><strong>Ritmo realista:</strong> si trabajas o estudias, dedica 10–15 horas por semana. No renuncies a tu empleo hasta tener ingresos estables y un colchón de gastos. Si un mes no consigues clientes, revisa el mensaje y el nicho antes de bajar el precio.</p>
+          </div>
+
+          <div class="premium-block" id="p-precios">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Referencias en ARS</span>
+              <h3>Ofertas para adaptar, no para copiar</h3>
+              <p>Precios orientativos de mercado para Argentina. Ajusta según tu experiencia, el alcance, la urgencia y los costos reales. No incluyen impuestos.</p>
+            </div>
+
+            <ul class="offer-list">
+              <li>
+                <div><strong>Página web para pymes</strong><small>Hasta 5 secciones + formulario</small></div>
+                <div class="offer-price">ARS 350.000–650.000<small>pago único</small></div>
+              </li>
+              <li>
+                <div><strong>Automatización de tareas</strong><small>1–2 flujos documentados</small></div>
+                <div class="offer-price">Desde ARS 180.000<small>+ mantenimiento opcional</small></div>
+              </li>
+              <li>
+                <div><strong>Asistente con IA</strong><small>Consultas frecuentes + derivación</small></div>
+                <div class="offer-price">Desde ARS 300.000<small>+ ARS 60.000–120.000/mes</small></div>
+              </li>
+              <li>
+                <div><strong>Seguimiento de presupuestos</strong><small>Registro + recordatorios</small></div>
+                <div class="offer-price">Desde ARS 150.000<small>+ ARS 45.000/mes</small></div>
+              </li>
+              <li>
+                <div><strong>Auditoría de procesos</strong><small>3 días + informe priorizado</small></div>
+                <div class="offer-price">ARS 150.000–400.000<small>pago único</small></div>
+              </li>
+              <li>
+                <div><strong>Mantenimiento mensual</strong><small>Soporte, copias y cambios menores</small></div>
+                <div class="offer-price">ARS 45.000–90.000/mes<small>según horas</small></div>
+              </li>
+            </ul>
+
+            <p class="premium-note"><strong>Antes de cotizar:</strong> calcula tus horas, suma herramientas y costos, y define qué queda fuera. Un precio bajo con alcance abierto termina siendo un problema para ambas partes.</p>
+          </div>
+
+          <div class="premium-block" id="p-auditoria">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">3 días</span>
+              <h3>La auditoría exprés que abre la puerta</h3>
+              <p>Es un producto de entrada: bajo riesgo para el cliente, información valiosa para ti y una propuesta natural al terminar. Cóbrala o regálala solo a clientes ideales.</p>
+            </div>
+
+            <ol class="audit-timeline">
+              <li>
+                <span class="day">Día 1</span>
+                <strong>Mapear el proceso</strong>
+                <p>Una llamada de 45 minutos con quien sufre el problema a diario. Dibuja el recorrido desde que entra una consulta hasta que se cobra.</p>
+                <span class="audit-out">Entregable: mapa de 5 pasos y 3 fugas visibles.</span>
+              </li>
+              <li>
+                <span class="day">Día 2</span>
+                <strong>Medir la línea base</strong>
+                <p>Pide 14 días de datos: mensajes, llamadas perdidas, tiempos de respuesta, citas y cierres. Si no hay datos, estima con el equipo y márcalo como supuesto.</p>
+                <span class="audit-out">Entregable: una hoja con el costo actual del problema.</span>
+              </li>
+              <li>
+                <span class="day">Día 3</span>
+                <strong>Proponer el piloto</strong>
+                <p>Presenta una sola automatización priorizada por retorno, con plazo, precio y métrica de éxito. Nada de un roadmap de 12 iniciativas.</p>
+                <span class="audit-out">Entregable: propuesta de 1 página + siguiente paso agendado.</span>
+              </li>
+            </ol>
+
+            <div class="premium-subhead">
+              <h4>Las preguntas que sacan los números</h4>
+            </div>
+            <ul class="question-list">
+              <li>¿Cuántas consultas entran al mes y por qué canales?</li>
+              <li>¿Cuántas se contestan en menos de 30 minutos?</li>
+              <li>¿Cuántas citas se pierden por no hacer seguimiento?</li>
+              <li>¿Cuánto vale para ti una cita o un cliente nuevo?</li>
+              <li>¿Cuántas horas al mes dedica el equipo a tareas repetitivas?</li>
+              <li>¿Qué intentaste antes y por qué no funcionó?</li>
+            </ul>
+
+            <p class="premium-note"><strong>Como referencia:</strong> busca que el ahorro anual estimado sea varias veces tu precio. Si no lo es, reduce el alcance o no avances. No prometas un ahorro que no puedas comprobar.</p>
+          </div>
+
+          <div class="premium-block" id="p-economia">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Economía y marco argentino</span>
+              <h3>Escenarios, simulador y contexto legal</h3>
+              <p>Los proyectos pagan las facturas; la recurrencia ayuda a estabilizar la caja. La tabla es un ejemplo aritmético con supuestos, no una proyección garantizada.</p>
+            </div>
+
+            <div class="matrix-wrap">
+              <table class="matrix">
+                <thead>
+                  <tr>
+                    <th>Escenario</th>
+                    <th>Clientes mensuales</th>
+                    <th>MRR</th>
+                    <th>Costos fijos/mes</th>
+                    <th>Resultado/mes</th>
+                    <th>Resultado 12 meses*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Arranque</td><td>3 × ARS 45.000</td><td>ARS 135.000</td><td>ARS 80.000</td><td>ARS 55.000</td><td>ARS 660.000</td></tr>
+                  <tr><td>Validado</td><td>6 × ARS 55.000</td><td>ARS 330.000</td><td>ARS 120.000</td><td>ARS 210.000</td><td>ARS 2.520.000</td></tr>
+                  <tr><td>Escalado</td><td>12 × ARS 65.000</td><td>ARS 780.000</td><td>ARS 250.000</td><td>ARS 530.000</td><td>ARS 6.360.000</td></tr>
+                  <tr><td>Consolidado</td><td>20 × ARS 75.000</td><td>ARS 1.500.000</td><td>ARS 450.000</td><td>ARS 1.050.000</td><td>ARS 12.600.000</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="premium-note"><strong>*Supuestos:</strong> 12 meses con la misma cantidad de clientes, sin impuestos, comisiones, mora ni bajas. No es una promesa de ingresos. Si cambia un supuesto, cambia el resultado.</p>
+
+            <div class="estimator" aria-label="Simulador de ingresos recurrentes">
+              <div class="estimator-inputs">
+                <div class="control">
+                  <div class="control__top"><label for="pRetainers">Clientes en recurrencia</label><span class="control__val" id="pRetainersVal">8</span></div>
+                  <input type="range" id="pRetainers" min="0" max="30" step="1" value="8">
+                </div>
+                <div class="control">
+                  <div class="control__top"><label for="pPrice">Precio mensual (ARS)</label><span class="control__val" id="pPriceVal">ARS 45.000</span></div>
+                  <input type="range" id="pPrice" min="20000" max="200000" step="5000" value="45000">
+                </div>
+                <div class="control">
+                  <div class="control__top"><label for="pSetup">Setup por cliente nuevo (ARS)</label><span class="control__val" id="pSetupVal">ARS 120.000</span></div>
+                  <input type="range" id="pSetup" min="0" max="500000" step="25000" value="120000">
+                </div>
+                <div class="control">
+                  <div class="control__top"><label for="pNew">Clientes nuevos al mes</label><span class="control__val" id="pNewVal">1</span></div>
+                  <input type="range" id="pNew" min="0" max="5" step="1" value="1">
+                </div>
+              </div>
+              <div class="estimator-results">
+                <div class="est-out"><span>MRR</span><strong id="pOutMrr">ARS 360.000</strong></div>
+                <div class="est-out"><span>Setup del mes</span><strong id="pOutSetup">ARS 120.000</strong></div>
+                <div class="est-out est-out--wide"><span>Ingreso total del mes</span><strong id="pOutTotal">ARS 480.000</strong></div>
+                <div class="est-out"><span>Año 1 a este ritmo</span><strong id="pOutYear">ARS 5.760.000</strong></div>
+                <div class="est-out"><span>LTV estimado</span><strong id="pOutLtv">ARS 756.000</strong></div>
+                <div class="est-out"><span>CAC máximo sugerido</span><strong id="pOutCac">ARS 252.000</strong></div>
+              </div>
+            </div>
+
+            <p class="premium-note"><strong>Fórmulas del simulador:</strong> MRR = clientes × precio mensual. LTV estimado = precio mensual × 24 meses × margen 70%. CAC máximo sugerido = LTV ÷ 3. Son supuestos para comparar escenarios, no resultados reales.</p>
+
+            <div class="legal-note">
+              <h4>Contexto argentino (orientativo)</h4>
+              <p>Para facturar necesitas CUIT y una inscripción fiscal acorde a tu actividad; el monotributo es una opción para determinados pequeños contribuyentes. La facturación electrónica se gestiona ante <strong>ARCA (ex-AFIP)</strong>. La <strong>Ley 25.326 de Protección de Datos Personales</strong> regula el tratamiento de datos y la <strong>Ley 24.240 de Defensa del Consumidor</strong> aplica en relaciones de consumo.</p>
+              <p>Este contenido es educativo y no reemplaza asesoramiento contable o legal. Antes de inscribirte, fijar precios o firmar un contrato, consulta a un contador y, si corresponde, a un abogado.</p>
+            </div>
+          </div>
+
+          <div class="premium-block" id="p-kpis">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Panel de control</span>
+              <h3>Seis KPIs explicados con ejemplos</h3>
+              <p>Un KPI sin fuente y sin frecuencia es una opinión. Elige seis, define cómo los mides y revísalos todos los viernes. Los objetivos son orientativos: ajústalos a tu propio histórico.</p>
+            </div>
+
+            <div class="kpi-grid">
+              <article class="kpi-card">
+                <h4>Tiempo de primera respuesta</h4>
+                <p>Cuánto tarda una consulta en recibir la primera respuesta humana o automática. Es la métrica más visible para el cliente.</p>
+                <dl>
+                  <div><dt>Fórmula</dt><dd>Suma de tiempos de respuesta ÷ consultas respondidas</dd></div>
+                  <div><dt>Objetivo orientativo</dt><dd>Menos de 30 minutos en horario comercial</dd></div>
+                  <div><dt>Ejemplo</dt><dd>10 consultas con 300 minutos en total = 30 minutos de promedio</dd></div>
+                </dl>
+              </article>
+
+              <article class="kpi-card">
+                <h4>Consultas atendidas</h4>
+                <p>Porcentaje de consultas que reciben alguna respuesta dentro de las 24 horas. Mide si se está perdiendo demanda.</p>
+                <dl>
+                  <div><dt>Fórmula</dt><dd>Consultas respondidas ÷ consultas recibidas × 100</dd></div>
+                  <div><dt>Objetivo orientativo</dt><dd>Más del 90%</dd></div>
+                  <div><dt>Ejemplo</dt><dd>90 respondidas de 100 recibidas = 90%</dd></div>
+                </dl>
+              </article>
+
+              <article class="kpi-card">
+                <h4>Presupuestos con seguimiento</h4>
+                <p>Porcentaje de presupuestos que reciben al menos un contacto posterior. Mide si el equipo retoma las oportunidades.</p>
+                <dl>
+                  <div><dt>Fórmula</dt><dd>Presupuestos con seguimiento ÷ presupuestos enviados × 100</dd></div>
+                  <div><dt>Objetivo orientativo</dt><dd>Más del 80%</dd></div>
+                  <div><dt>Ejemplo</dt><dd>16 de 20 presupuestos con seguimiento = 80%</dd></div>
+                </dl>
+              </article>
+
+              <article class="kpi-card">
+                <h4>MRR</h4>
+                <p>Ingreso recurrente mensual. Sirve para saber cuánto dinero entra sin depender de proyectos nuevos.</p>
+                <dl>
+                  <div><dt>Fórmula</dt><dd>Clientes mensuales × precio mensual</dd></div>
+                  <div><dt>Objetivo orientativo</dt><dd>Cubrir tus costos fijos; define tu propio número</dd></div>
+                  <div><dt>Ejemplo</dt><dd>6 clientes × ARS 45.000 = ARS 270.000</dd></div>
+                </dl>
+              </article>
+
+              <article class="kpi-card">
+                <h4>Churn mensual</h4>
+                <p>Porcentaje de clientes que cancelan en el mes. Un churn alto indica problemas de entrega, precio o expectativas.</p>
+                <dl>
+                  <div><dt>Fórmula</dt><dd>Clientes que cancelan ÷ clientes al inicio del mes × 100</dd></div>
+                  <div><dt>Objetivo orientativo</dt><dd>Menos del 5% mensual</dd></div>
+                  <div><dt>Ejemplo</dt><dd>1 baja de 20 clientes = 5%</dd></div>
+                </dl>
+              </article>
+
+              <article class="kpi-card">
+                <h4>LTV / CAC</h4>
+                <p>Relación entre el valor estimado de un cliente y lo que cuesta conseguirlo. Si el CAC se acerca al LTV, el crecimiento se vuelve frágil.</p>
+                <dl>
+                  <div><dt>Fórmula</dt><dd>LTV ÷ CAC</dd></div>
+                  <div><dt>Objetivo orientativo</dt><dd>Más de 3 veces</dd></div>
+                  <div><dt>Ejemplo</dt><dd>LTV ARS 756.000 ÷ CAC ARS 150.000 = 5 veces</dd></div>
+                </dl>
+              </article>
+            </div>
+
+            <p class="premium-note"><strong>Revisión de viernes (15 min):</strong> ¿qué número se movió, por qué y qué acción concreta tomo la próxima semana? Una sola acción por KPI. Compara contra tu propio histórico, no contra cifras ajenas.</p>
+          </div>
+
+          <div class="premium-block" id="p-errores">
+            <div class="premium-block__head">
+              <span class="pill pill--soft">Anti-patrón</span>
+              <h3>Seis errores que conviene evitar</h3>
+              <p>Todos se resumen en una regla: valida con clientes y dinero antes de invertir tiempo o herramientas.</p>
+            </div>
+
+            <ul class="error-grid">
+              <li><strong>Vender «IA» en vez de resultados</strong><p>Al cliente no le importa el modelo: le importan las consultas atendidas y las horas que se ahorra. Explica el beneficio con su proceso.</p></li>
+              <li><strong>Cobrar sin calcular tus horas</strong><p>Un precio bajo con alcance abierto termina en pérdida. Calcula horas, herramientas y margen antes de firmar.</p></li>
+              <li><strong>Construir meses antes de vender</strong><p>Si nadie pagó, tienes una hipótesis. Vende un piloto acotado y construye con una parte cobrada por adelantado.</p></li>
+              <li><strong>Aceptar cualquier cliente</strong><p>Un cliente fuera de nicho consume el triple y no genera un caso útil. Aprende a decir que no a tiempo.</p></li>
+              <li><strong>No medir el antes</strong><p>Sin línea base no puedes demostrar el ahorro ni renovar el mantenimiento. Mide antes de tocar nada.</p></li>
+              <li><strong>Depender de ti para todo</strong><p>Documenta procesos, accesos y plantillas desde el primer cliente. Si todo depende de tu memoria, el negocio no escala.</p></li>
+            </ul>
+
+            <p class="premium-note"><strong>Siguiente paso:</strong> elige una idea, escribe en una frase qué problema resuelve y contacta a 10 negocios esta semana. Si no consigues respuestas, ajusta el mensaje antes de bajar el precio.</p>
+          </div>
+
+          <div class="premium-responsible">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 3.5l7.5 3v5.2c0 4.3-3.1 7.7-7.5 8.8-4.4-1.1-7.5-4.5-7.5-8.8V6.5l7.5-3Z" stroke-linejoin="round"/>
+              <path d="M12 9v3.5M12 16h.01" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <strong>Uso responsable y marco legal</strong>
+              <p>No envíes mensajes masivos sin consentimiento ni publiques datos de clientes sin permiso. Si tratas datos personales, aplica la Ley 25.326. Si vendes a consumidores, revisa la Ley 24.240. Para impuestos, facturación e inscripción, consulta a un contador. La confianza es lo que hace que un cliente vuelva.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Nexora Digital · soluciones digitales para pymes. Demo educativa sin backend.</p>
+      <p class="footer__right">Sesión de <span id="footerUser">demo</span></p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
